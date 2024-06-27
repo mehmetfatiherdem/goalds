@@ -1,14 +1,13 @@
-package main
-
-import "fmt"
+package binarysearch
 
 func BinarySearch(nums []int, target int) (int, bool) {
+
 	beg := 0
-	end := len(nums)-1
-	mid := len(nums)/2
+	end := len(nums) - 1
+	mid := len(nums) / 2
 
 	for beg <= end {
-		
+
 		if nums[mid] == target {
 			return mid, true
 		} else if nums[mid] > target {
@@ -23,6 +22,7 @@ func BinarySearch(nums []int, target int) (int, bool) {
 	return -1, false
 }
 
+/*
 func main() {
 	nums := []int{0, 2, 4, 6, 8, 10}
 	var target int = 4
@@ -35,3 +35,4 @@ func main() {
 		fmt.Println("value found at index", index)
 	}
 }
+*/
