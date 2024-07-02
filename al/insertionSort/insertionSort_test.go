@@ -8,6 +8,7 @@ import (
 
 var (
 	happyPathArray = []int{23,1,10,5,2}
+	sortedArray = []int{1,2,3,4,5}
 )
 
 func TestHappyPathCase(t *testing.T) {
@@ -16,6 +17,22 @@ func TestHappyPathCase(t *testing.T) {
 	InsertionSort(happyPathArray)
 
 	isEqual, ok := arrayfuncs.AreArraysEqual(happyPathArray, sorted)
+
+	if !ok {
+		t.Fatalf("arrays are not equal size!!!")
+	}
+
+	if !isEqual {
+		t.Fatalf("array is not sorted properly!!")
+	}
+}
+
+func TestSortedArrayCase(t *testing.T) {
+	sorted := [] int{1,2,3,4,5}
+
+	InsertionSort(sortedArray)
+
+	isEqual, ok := arrayfuncs.AreArraysEqual(sortedArray, sorted)
 
 	if !ok {
 		t.Fatalf("arrays are not equal size!!!")
