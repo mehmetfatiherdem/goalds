@@ -1,4 +1,4 @@
-package insertionSort
+package insertionsort
 
 func InsertionSort(nums []int) {
 

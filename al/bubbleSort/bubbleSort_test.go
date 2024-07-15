@@ -3,7 +3,7 @@ package bubblesort
 import (
 	"testing"
 
-	arrayfuncs "example.com/arrayFuncs"
+	"goalds/utils"
 )
 
 var(
@@ -15,7 +15,7 @@ func TestHappyPathCase(t *testing.T) {
 
 	BubbleSort(happyPathArray)
 
-	equal, ok := arrayfuncs.AreArraysEqual(sorted, happyPathArray)
+	equal, ok := utils.AreArraysEqual(sorted, happyPathArray)
 
 	if !ok {
 		t.Fatalf("array sizes are not equal!!!")

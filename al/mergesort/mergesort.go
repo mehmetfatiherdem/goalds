@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package mergesort
 
 func merge(nums []int, l int, m int, r int) {
 	n1 := m - l + 1
@@ -58,9 +56,4 @@ func MergeSort(nums []int, l int, r int) {
 	}
 }
 
-func main() {
 
-	arr := []int{38, 27, 43, 3, 9, 82, 10}
-	MergeSort(arr, 0, len(arr)-1)
-	fmt.Println("Sorted array is:", arr)
-}

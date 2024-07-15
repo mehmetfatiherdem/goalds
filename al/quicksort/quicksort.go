@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package quicksort
 
 func partition(nums []int, low int, high int) int {
 
@@ -31,12 +29,4 @@ func QuickSort(nums []int, low int, high int) {
 	}
 }
 
-func main() {
-	nums := []int{10, 7, 8, 9, 1, 5}
 
-	QuickSort(nums, 0, len(nums) - 1)
-
-	for _, v := range nums {
-		fmt.Println(v)
-	}
-}

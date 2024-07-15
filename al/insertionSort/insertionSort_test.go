@@ -1,9 +1,9 @@
-package insertionSort
+package insertionsort
 
 import (
 	"testing"
 
-	arrayfuncs "example.com/arrayFuncs"
+	"goalds/utils"
 )
 
 var (
@@ -16,7 +16,7 @@ func TestHappyPathCase(t *testing.T) {
 
 	InsertionSort(happyPathArray)
 
-	isEqual, ok := arrayfuncs.AreArraysEqual(happyPathArray, sorted)
+	isEqual, ok := utils.AreArraysEqual(happyPathArray, sorted)
 
 	if !ok {
 		t.Fatalf("arrays are not equal size!!!")
@@ -32,7 +32,7 @@ func TestSortedArrayCase(t *testing.T) {
 
 	InsertionSort(sortedArray)
 
-	isEqual, ok := arrayfuncs.AreArraysEqual(sortedArray, sorted)
+	isEqual, ok := utils.AreArraysEqual(sortedArray, sorted)
 
 	if !ok {
 		t.Fatalf("arrays are not equal size!!!")
